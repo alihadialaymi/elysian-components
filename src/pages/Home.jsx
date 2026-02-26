@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import StickyNav from '../components/luxury/StickyNav';
-import DesignTokens from '../components/luxury/DesignTokens';
-import ComponentWrapper from '../components/luxury/ComponentWrapper';
-import InfiniteMirrorSlider from '../components/luxury/sliders/InfiniteMirrorSlider';
-import CinematicFullscreenSlider from '../components/luxury/sliders/CinematicFullscreenSlider';
-import EditorialVerticalSlider from '../components/luxury/sliders/EditorialVerticalSlider';
-import MinimalProductSlider from '../components/luxury/sliders/MinimalProductSlider';
+import StickyNav from '@/components/luxury/StickyNav';
+import DesignTokens from '@/components/luxury/DesignTokens';
+import ComponentWrapper from '@/components/luxury/ComponentWrapper';
+import InfiniteMirrorSlider from '@/components/luxury/sliders/InfiniteMirrorSlider';
+import CinematicFullscreenSlider from '@/components/luxury/sliders/CinematicFullscreenSlider';
+import EditorialVerticalSlider from '@/components/luxury/sliders/EditorialVerticalSlider';
+import MinimalProductSlider from '@/components/luxury/sliders/MinimalProductSlider';
 
 export default function Home() {
   return (
