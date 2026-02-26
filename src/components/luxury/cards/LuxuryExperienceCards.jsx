@@ -59,6 +59,17 @@ export default function LuxuryExperienceCards() {
               transition={{ duration: 0.5 }}
             />
 
+            {/* Reflection Sweep on Hover */}
+            <motion.div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              style={{
+                background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
+              }}
+            />
+
             <motion.div
               className="absolute inset-0 pointer-events-none"
               initial={{ opacity: 0 }}

@@ -41,6 +41,18 @@ export default function CinematicVideoHero() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/30 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/70 via-transparent to-transparent" />
 
+      {/* Reflection Sweep Effect */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100"
+        animate={{
+          background: [
+            'linear-gradient(110deg, transparent 0%, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%, transparent 100%)',
+            'linear-gradient(110deg, transparent 40%, transparent 80%, rgba(255,255,255,0.15) 90%, transparent 100%, transparent 140%)',
+          ],
+        }}
+        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+      />
+
       <motion.div
         className="absolute inset-0 pointer-events-none"
         animate={{

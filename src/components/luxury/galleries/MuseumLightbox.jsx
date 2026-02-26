@@ -90,15 +90,15 @@ export default function MuseumLightbox() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 bg-[#0A0A0A] z-50 flex items-center justify-center"
             onClick={() => setSelectedIndex(null)}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ scale: 0.75, opacity: 0, rotateX: 10 }}
+              animate={{ scale: 1, opacity: 1, rotateX: 0 }}
+              exit={{ scale: 0.75, opacity: 0, rotateX: -10 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="relative max-w-4xl max-h-[80vh] p-8"
               onClick={(e) => e.stopPropagation()}
             >

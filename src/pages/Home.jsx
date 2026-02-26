@@ -31,29 +31,64 @@ export default function Home() {
       <StickyNav />
       
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        {/* Parallax Background Elements */}
+        <motion.div
+          className="absolute top-20 right-0 w-96 h-96 rounded-full bg-[#C0906F]/5 blur-3xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+          style={{ translateY: '0px' }}
+          whileInView={{ translateY: '-50px' }}
+          viewport={{ once: false }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#C0906F]/3 blur-3xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          style={{ translateY: '0px' }}
+          whileInView={{ translateY: '30px' }}
+          viewport={{ once: false }}
+        />
+
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="inline-block mb-6 px-4 py-2 rounded-full border border-[#C0906F]/30 bg-[#C0906F]/5">
+            <motion.div
+              className="inline-block mb-6 px-4 py-2 rounded-full border border-[#C0906F]/30 bg-[#C0906F]/5"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <span className="text-[#C0906F] text-xs tracking-[0.3em] uppercase">Components Library</span>
-            </div>
+            </motion.div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white mb-6 leading-tight">
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               Luxury UI
               <br />
               <span className="bg-gradient-to-r from-[#C0906F] to-[#8B6B4F] bg-clip-text text-transparent">
                 Components
               </span>
-            </h1>
+            </motion.h1>
             
-            <p className="text-[#A0A0A0] text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+            <motion.p
+              className="text-[#A0A0A0] text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               A premium collection of high-end interface components crafted with precision. 
               Elegant interactions, smooth animations, and luxurious feel in every detail.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>

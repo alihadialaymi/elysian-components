@@ -73,14 +73,15 @@ export default function VideoModalViewer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 bg-[#0A0A0A] z-50 flex items-center justify-center"
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ scale: 0.85, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.85, opacity: 0, y: 50 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="relative w-full h-full max-w-7xl max-h-screen p-8 flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >

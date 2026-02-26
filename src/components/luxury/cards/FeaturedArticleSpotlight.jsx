@@ -33,6 +33,17 @@ export default function FeaturedArticleSpotlight() {
             }}
           />
 
+          {/* Parallax Background */}
+          <motion.div
+            className="absolute inset-0"
+            style={{ translateY: '0px' }}
+            whileInView={{ translateY: '-20px' }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
+          >
+            <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-[#C0906F]/10 blur-3xl" />
+          </motion.div>
+
           <div className="absolute top-6 left-6">
             <motion.div
               className="px-4 py-2 rounded-full bg-[#C0906F]/20 backdrop-blur-md border border-[#C0906F]/30"
@@ -51,19 +62,39 @@ export default function FeaturedArticleSpotlight() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
           >
-            <p className="text-[#C0906F] text-xs tracking-[0.3em] uppercase mb-4">
-              Architecture & Design
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-[#C0906F] text-xs tracking-[0.3em] uppercase mb-4">
+                Architecture & Design
+              </p>
+            </motion.div>
 
-            <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-extralight mb-6 leading-tight">
+            <motion.h2
+              className="text-white text-3xl md:text-4xl lg:text-5xl font-extralight mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               Redefining Luxury in Modern Living
-            </h2>
+            </motion.h2>
 
-            <p className="text-[#A0A0A0] text-base font-light leading-relaxed mb-8 max-w-xl">
+            <motion.p
+              className="text-[#A0A0A0] text-base font-light leading-relaxed mb-8 max-w-xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               An intimate exploration of how contemporary architects blend heritage with innovation, 
               creating spaces that transcend time and speak to the soul of modern elegance.
-            </p>
+            </motion.p>
 
             <div className="flex items-center justify-between mb-8 pb-6 border-b border-white/10">
               <div>

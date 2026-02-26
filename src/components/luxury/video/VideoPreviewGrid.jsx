@@ -91,6 +91,19 @@ export default function VideoPreviewGrid() {
               className="absolute inset-0 border-2 border-[#C0906F] opacity-0 group-hover:opacity-100 pointer-events-none"
               transition={{ duration: 0.3 }}
             />
+
+            {/* Reflection Sweep on Hover */}
+            <motion.div
+              className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100"
+              initial={false}
+              animate={hoveredId === video.id ? { 
+                background: [
+                  'linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
+                  'linear-gradient(120deg, transparent 100%, rgba(255,255,255,0.2) 150%, transparent 200%)',
+                ]
+              } : {}}
+              transition={{ duration: 1.5 }}
+            />
           </motion.div>
         ))}
       </div>

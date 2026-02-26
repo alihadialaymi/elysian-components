@@ -103,6 +103,15 @@ export default function EditorialVerticalSlider() {
         </div>
 
         <div className="relative flex flex-col justify-center p-6 md:p-12 bg-[#0A0A0A]">
+          {/* Parallax Background */}
+          <motion.div
+            className="absolute top-1/3 right-0 w-48 h-48 rounded-full bg-[#C0906F]/5 blur-3xl"
+            style={{ translateY: '0px' }}
+            whileInView={{ translateY: '-30px' }}
+            transition={{ duration: 1 }}
+            viewport={{ once: false }}
+          />
+
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -110,18 +119,34 @@ export default function EditorialVerticalSlider() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-6"
             >
-              <p className="text-[#C0906F] text-xs tracking-[0.3em] uppercase mb-4">
+              <motion.p
+                className="text-[#C0906F] text-xs tracking-[0.3em] uppercase mb-4"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
                 {slides[currentIndex].category}
-              </p>
+              </motion.p>
               
-              <h3 className="text-white text-2xl md:text-4xl font-light mb-4 leading-tight">
+              <motion.h3
+                className="text-white text-2xl md:text-4xl font-light mb-4 leading-tight"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
                 {slides[currentIndex].title}
-              </h3>
+              </motion.h3>
               
-              <p className="text-[#A0A0A0] text-sm md:text-base font-light leading-relaxed mb-8 max-w-sm">
+              <motion.p
+                className="text-[#A0A0A0] text-sm md:text-base font-light leading-relaxed mb-8 max-w-sm"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+              >
                 {slides[currentIndex].excerpt}
-              </p>
+              </motion.p>
               
               <button className="group flex items-center gap-2 text-white text-sm">
                 <span className="border-b border-transparent group-hover:border-[#C0906F] transition-colors duration-300">
